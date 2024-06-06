@@ -29,7 +29,7 @@ public class Main {
         String[] parts = input.split(" "); // разбор введённой строки в массив
         if (parts.length < 3) { // если число элементов строки меньше 3, то строка не является правильным математическим выражением
             throw new Exception("throws Exception //т.к. строка не является математической операцией");
-        } else if (parts.length > 4 && (Arrays.toString(operations).contains(parts[1]) & Arrays.toString(operations).contains(parts[3]))) { // если число элементов строки больше 4, то строка не является правильным математическим выражением (вероятно несколько арифм. операций)
+        } else if (parts.length > 4 && (Arrays.toString(operations).contains(parts[1]) & Arrays.toString(operations).contains(parts[3]))) { // если число элементов строки больше 4 и 2-ой и 4-ый - арифм. опериции, то строка не является правильным математическим выражением
             throw new Exception("throws Exception //т.к. формат математической операции не удовлетворяет заданию - два операнда и один оператор (+, -, /, *)");
         }
         else if (parts.length == 4) { // если число элементов строки равно 4, то строка является правильным математическим выражением
